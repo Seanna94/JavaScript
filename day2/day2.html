@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day2</title>
+
+    <style>
+        #1{background-color:#FFF;}
+        body{font:12px arial;background:#fff}
+        #3{ font-size: small}
+    </style>
+</head>
+<body>
+<h1>what to buy</h1>
+
+<p title="a gentle remider" id="4">Don't forget to buy this stuff.</p>
+<p class="2">这是class标签</p>
+<p id="3">这是id3标签</p>
+<h2 class="2">h2带有class属性</h2>
+<ul id="1">
+    <li>apple</li>
+    <li>orign</li>
+    <li>milk</li>
+    <li>pause</li>
+    <li>bounce</li>
+    <li>write</li>
+</ul>
+
+
+<script type="text/javascript">
+
+    var a =document.getElementsByTagName("p");
+    for (var i=0;i<a.length;i++){
+        var b=a[i].getAttribute("title");
+        alert(b);
+        if(b){
+         a[i].setAttribute("title","other title");
+            alert(a[i].getAttribute("title"));
+        }
+    }
+
+
+    // var a=document.getElementById("1");
+    // alert(a.getAttribute("title"));
+    // var d=a.setAttribute("title","the gentle title");
+    // alert(a.getAttribute("title"));
+    //
+
+    // var paras=document.getElementsByTagName("p");
+    // for (var i=0;i<paras.length;i++){
+    //     var v=paras[i].getAttribute("title");
+    //     if (v!=null) {
+    //         alert(v);
+    //     }
+    // }
+
+    // var paras=document.getElementsByTagName("p");
+    // for (var i=0;i<paras.length;i++){
+    //     var v=paras[i].getAttribute("title");
+    //     if (v) {
+    //         alert(v);
+    //     }
+    // }
+
+
+    // var b=document.getElementById("1");
+    // var items=b.getElementsByTagName("*");
+    // alert(items.length);
+    // for (var d=0;d < items.length;d++) {
+    //     alert(typeof items[d]);
+    // }
+    //
+
+    //alert(typeof document.getElementById("3"));
+    //alert(document.getElementsByTagName("li").length);
+    // for(var i=0;i<document.getElementsByTagName("li").length;i++){
+    //     alert(typeof document.getElementsByTagName("li")[i]);
+    // }
+
+    // var a=document.getElementsByTagName("li");
+    // for (var i=0;i<a.length;i++){
+    //     alert(typeof a[i]);
+    // }
+
+   // alert(document.getElementsByTagName("*").length);
+</script>
+</body>
+</html>
