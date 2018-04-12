@@ -11,33 +11,48 @@
     </style>
 </head>
 <body>
-<h1>what to buy</h1>
+<!--<h1>what to buy</h1>-->
 
-<p title="a gentle remider" id="4">Don't forget to buy this stuff.</p>
-<p class="2">这是class标签</p>
-<p id="3">这是id3标签</p>
-<h2 class="2">h2带有class属性</h2>
-<ul id="1">
-    <li>apple</li>
-    <li>orign</li>
-    <li>milk</li>
-    <li>pause</li>
-    <li>bounce</li>
-    <li>write</li>
+<!--<p title="a gentle remider" id="4">Don't forget to buy this stuff.</p>-->
+<!--<p class="2">这是class标签</p>-->
+<!--<p id="3">这是id3标签</p>-->
+<!--<h2 class="2">h2带有class属性</h2>-->
+<!--<ul id="1">-->
+    <!--<li>apple</li>-->
+    <!--<li>orign</li>-->
+    <!--<li>milk</li>-->
+    <!--<li>pause</li>-->
+    <!--<li>bounce</li>-->
+    <!--<li>write</li>-->
+<!--</ul>-->
+<h1>图片库</h1>
+<ul>
+    <li>
+        <a href="images/1.jpg" width="400px" height="300" title="大圣娶亲">大圣娶亲</a>
+    </li>
+    <li>
+        <a href="images/2.jpg" width="400px" height="300" title="酷酷的鹿">酷酷的鹿</a>
+    </li>
+    <li>
+        <a href="images/3.jpg" width="400px" height="300" title="月下麋鹿">月下麋鹿</a>
+    </li>
+    <li><a href="images/5.jpg" width="400px" height="300" title="树下的鹿">树下的鹿</a></li>
+
 </ul>
 
+<img id="placeholder" src="images/7.jpg" alt="图片画廊" width="400px" height="300">
 
 <script type="text/javascript">
 
-    var a =document.getElementsByTagName("p");
-    for (var i=0;i<a.length;i++){
-        var b=a[i].getAttribute("title");
-        alert(b);
-        if(b){
-         a[i].setAttribute("title","other title");
-            alert(a[i].getAttribute("title"));
-        }
-    }
+    // var a =document.getElementsByTagName("p");
+    // for (var i=0;i<a.length;i++){
+    //     var b=a[i].getAttribute("title");
+    //     alert(b);
+    //     if(b){
+    //      a[i].setAttribute("title","other title");
+    //         alert(a[i].getAttribute("title"));
+    //     }
+    // }
 
 
     // var a=document.getElementById("1");
