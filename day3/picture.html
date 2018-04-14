@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Picture</title>
+    <script type="text/javascript" src="scripts/showPic.js"></script>
+    <style>
+        body{
+            font-size: 30px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+<h1>图片库</h1>
+
+
+<ul>
+    <li>
+        <a href="images/1.jpg" width="400px" height="300" title="大圣娶亲"
+           onclick="showPic(this);return false;">大圣娶亲</a>
+    </li>
+    <li>
+        <a href="images/2.jpg" width="400px" height="300" title="酷酷的鹿"
+           onclick="showPic(this);return false;">酷酷的鹿</a>
+    </li>
+    <li>
+        <a href="images/3.jpg" width="400px" height="300" title="月下麋鹿"
+           onclick="showPic(this);return false;">月下麋鹿</a>
+    </li>
+    <li><a href="images/5.jpg" width="400px" height="300" title="树下的鹿"
+           onclick="showPic(this);return false;">树下的鹿</a>
+    </li>
+
+</ul>
+
+<img id="placeholder" src="images/7.jpg" alt="图片画廊" width="400px" height="300">
+
+<p id="description">选择一个图片</p>
+</body>
+</html>
