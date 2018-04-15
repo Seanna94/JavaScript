@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Picture</title>
     <script type="text/javascript" src="scripts/showPic.js"></script>
     <style>
         body{
-            font-size: 30px;
+            font-family: "Helvetica","Arial",sans-serif;
+            color: #333;
+            background-color: #ccc;
+            margin: 1em 10%;
+        }
 
+        h1{
+            color: #333;
+            background-color: transparent;
+        }
+        a{
+            color: #c60;
+            background-color: transparent;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            float: left;
+            padding: 1em;
+            list-style: none;
         }
 
     </style>
 
 </head>
-<body>
+<br>
 <h1>图片库</h1>
 
 
@@ -35,9 +56,9 @@
     </li>
 
 </ul>
-
+<div>
 <img id="placeholder" src="images/7.jpg" alt="图片画廊" width="400px" height="300">
-
+</div>
 <p id="description">选择一个图片</p>
 </body>
 </html>
