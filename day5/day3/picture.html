@@ -11,12 +11,9 @@
         color:#333;
         background-color:#fffccc;
         margin:1em 10%;
+        text-align: center;
     }
 
-    h1{
-        color:#333;
-        background-color: transparent;
-    }
     a{
         color: #c60;
         background-color: transparent;
@@ -25,6 +22,7 @@
     }
     ul{
         padding: 0;
+        display:inline-block;
     }
     li
     {
@@ -32,6 +30,25 @@
         padding: 1em;
         liststyle: none;
     }
+
+    #imagegallery{
+          list-style: none;
+      }
+
+    #imagegallery li a img{
+        border: 0;
+        width: 150px;
+        height: 130px;
+    }
+    #placeholder{
+        width:400px;
+        height:300px;
+        display: block;
+        margin:auto;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
 </style>
 
 </head>
@@ -39,27 +56,30 @@
 <h1>图片库</h1>
 
 
-<ul>
+<ul id="imagegallery">
     <li>
-        <a href="images/1.jpg" width="400px" height="300" title="大圣娶亲"
-           onclick="showPic(this);return false;">大圣娶亲</a>
+        <a href="images/1.jpg"  title="大圣娶亲">
+            <img src="images/1.jpg" alt="大圣娶亲">
+        </a>
     </li>
     <li>
-        <a href="images/2.jpg" width="400px" height="300" title="酷酷的鹿"
-           onclick="showPic(this);return false;">酷酷的鹿</a>
+        <a href="images/2.jpg" title="酷酷的鹿">
+            <img src="images/2.jpg" alt="酷酷的鹿">
+        </a>
     </li>
     <li>
-        <a href="images/3.jpg" width="400px" height="300" title="月下麋鹿"
-           onclick="showPic(this);return false;">月下麋鹿</a>
+        <a href="images/3.jpg" title="月下麋鹿">
+            <img src="images/3.jpg" alt="月下麋鹿">
+        </a>
     </li>
-    <li><a href="images/5.jpg" width="400px" height="300" title="树下的鹿"
-           onclick="showPic(this);return false;">树下的鹿</a>
+    <li>
+        <a href="images/5.jpg"  title="树下的鹿">
+            <img src="images/5.jpg" alt="树下的鹿">
+        </a>
     </li>
 
 </ul>
-<div>
-<img id="placeholder" src="images/7.jpg" alt="图片画廊" width="400px" height="300">
-</div>
+<img id="placeholder" src="images/7.jpg" alt="图片画廊">
 <p id="description">选择一个图片</p>
 </body>
 </html>

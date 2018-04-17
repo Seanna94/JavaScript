@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <script type="text/javascript" src="day5.js"></script>
+    <title>Dom</title>
 </head>
 <body>
-$END$
+<!--<a href="javascript:popUp('http://www.baidu.com/');">百度</a>javascript伪协议-->
+<!--<a href="#",onclick="popUp('http://www.baidu.com/');return false;">百度</a>-->
+<!--<a href="http://www.baidu.com/" onclick="popUp(this.getAttribute('href')); return false;">百度</a>&lt;!&ndash;预留后路&ndash;&gt;-->
+<!--<a href="http://www.baidu.com/" onclick="popUp(this.href); return false;">百度</a>-->
+
+
+<a href="http://www.baidu.com" class="popup">百度</a>
+
 </body>
 </html>

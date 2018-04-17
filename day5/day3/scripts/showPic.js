@@ -1,27 +1,64 @@
-/**
- * Created by Seanna on 2018/4/14.
- */
 
-//Ìí¼ÓÊó±êÊÂ¼þ£¬²¢¶Ôº¯Êý½øÐÐµ÷ÓÃ¡£
-function showPic(whichPic) {
-
-    //ÊµÏÖÍ¼Æ¬Ìæ»»
-    var source = whichPic.getAttribute("href");
-    var placeholder = document.getElementById("placeholder");
-    placeholder.setAttribute("src", source);
-    //ÊµÏÖÎÄ±¾ÇÐ»»
-    var text=whichPic.getAttribute("title");
-    var description=document.getElementById("description");
-    description.firstChild.nodeValue=text;
-    //alert(description.nodeValue);//null
-    //alert(description.childNodes[0].nodeValue);//·µ»ØÎÄ±¾½Úµã
-    //alert(description.firstChild.nodeValue);//firstChild===childNodes[0]
+function prepareGallery() {
+    if(!document.getElementById){
+        return false;
+    }
+    if(!document.getElementsByTagName){
+        return false;
+    }
+    if(!document.getElementById("imagegallery")){
+        return false;
+    }
+    var gallery=document.getElementById("imagegallery");
+    var links=gallery.getElementsByTagName("a");
+    for(var i=0;i<links.length;i++){
+        links[i].onclick=function () {
+            return showPic(this);
+        }
+       // links[i].onkeypress=links[i].onclick;ä¸å»ºè®®ä½¿ç”¨é¼ æ ‡äº‹ä»¶
+    }
 }
 
-//Ò³Ãæ¼ÓÔØÊ±µ÷ÓÃµÄº¯Êý
-//window.onload=function countBodyChilddren(){
-//    var body_element=document.getElementsByTagName("body")[0];
-//    alert(body_element.length);
-//    alert(body_element.childNodes.length);
-//}
+
+
+function showPic(whichPic){
+    if (!document.getElementById("placeholder")) {
+        return true;
+    }
+    //var source=whichPic.getAttribute("href");
+    var source=whichPic.href;
+    var placeholder=document.getElementById("placeholder");
+    if(placeholder.nodeName !='IMG'){
+        return true;
+    }
+    //placeholder.setAttribute("src",source);
+    placeholder.src=source;
+    if(!document.getElementById("description")){
+        return false;
+    }
+    // if(whichPic.getAttribute("title")){
+    // var text=whichPic.getAttribute("title");
+    // }else{
+    //     text='';
+    // }
+    var text=whichPic.getAttribute("title")? whichPic.getAttribute("title") : '';//ä¸‰å…ƒæ“ä½œç¬¦
+    var description=document.getElementById("description");
+    if (description.firstChild.nodeType==3){
+        description.firstChild.nodeValue=text;
+    }
+    return false;
+}
+
+function addLoadEvent(func) {
+    var oldonload=window.onload;
+    if (typeof window.onload !='function'){
+        window.onload=func;
+    }else{
+        window.onload=function () {
+            oldonload();
+            func();
+        }
+    }
+}
+addLoadEvent(prepareGallery);
 
