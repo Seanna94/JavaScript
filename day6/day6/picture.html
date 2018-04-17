@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Picture</title>
+    <script type="text/javascript" src="scripts/showPic.js"></script>
+    <link href="css.css" type="text/css">
+<style>
+    body{
+        font-family :"Helvetica","Arial",sans-serif;
+        color:#333;
+        background-color:#fffccc;
+        margin:1em 10%;
+        text-align: center;
+    }
+
+    a{
+        color: #c60;
+        background-color: transparent;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    ul{
+        padding: 0;
+        display:inline-block;
+    }
+    li
+    {
+        float: left;
+        padding: 1em;
+        liststyle: none;
+    }
+
+    #imagegallery{
+          list-style: none;
+      }
+
+    #imagegallery li a img{
+        border: 0;
+        width: 150px;
+        height: 130px;
+    }
+    #placeholder{
+        width:400px;
+        height:300px;
+        display: block;
+        margin:auto;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+</style>
+
+</head>
+<br>
+<h1>图片库</h1>
+
+
+<ul id="imagegallery">
+    <li>
+        <a href="images/1.jpg"  title="大圣娶亲">
+            <img src="images/1.jpg" alt="大圣娶亲">
+        </a>
+    </li>
+    <li>
+        <a href="images/2.jpg" title="酷酷的鹿">
+            <img src="images/2.jpg" alt="酷酷的鹿">
+        </a>
+    </li>
+    <li>
+        <a href="images/3.jpg" title="月下麋鹿">
+            <img src="images/3.jpg" alt="月下麋鹿">
+        </a>
+    </li>
+    <li>
+        <a href="images/5.jpg"  title="树下的鹿">
+            <img src="images/5.jpg" alt="树下的鹿">
+        </a>
+    </li>
+
+</ul>
+<!--<img id="placeholder" src="images/7.jpg" alt="图片画廊">-->
+<!--<p id="description">选择一个图片</p>-->
+</body>
+</html>
