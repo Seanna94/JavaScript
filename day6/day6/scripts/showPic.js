@@ -61,9 +61,21 @@ function addLoadEvent(func) {
     }
 }
 addLoadEvent(prepareGallery);
-addLoadEvent(f);
+addLoadEvent(preparePlaceholder);
 
-function f() {
+function preparePlaceholder() {
+    if (!document.createElement){
+        return false;
+    }
+    if(!document.createTextNode){
+        return false;
+    }
+    if(! document.getElementById){
+        return false;
+    }
+    if(! document.getElementById("imagegallery")){
+        return false;
+    }
     var placeholder=document.createElement("img");
     placeholder.setAttribute("id","placeholder");
     placeholder.setAttribute("src","images/7.jpg");
@@ -73,12 +85,15 @@ function f() {
     var desctext=document.createTextNode("选择一个图片");
     description.appendChild(desctext);
     //document.getElementsByTagName("body")[0].appendChild(description);
+
     //document.getElementsByTagName("body")[0].appendChild(desctext);
-    document.body.appendChild(placeholder);//简化
-    document.body.appendChild(description);
+   // document.body.appendChild(placeholder);//简化
+  //  document.body.appendChild(description);
 
     var gallery=document.getElementById("imagegallery");
-    gallery.parentNode.insertBefore(placeholder,gallery);
+    //gallery.parentNode.insertBefore(placeholder,gallery);
+    insertAfter(placeholder,gallery);
+    insertAfter(description,placeholder);
 }
 
 //insertAfter函数
